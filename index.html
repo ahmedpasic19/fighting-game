@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(44, 44, 44);
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        background-color: blue;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 576;
+        width: 1024;
+      "
+    >
+      <!-- Healthbars container -->
+      <div
+        style="
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100px;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          padding: 20px;
+          z-index: 2;
+        "
+      >
+        <!-- player heath -->
+        <div
+          style="
+            width: 100%;
+            background-color: orangered;
+            display: flex;
+            justify-content: end;
+          "
+        >
+          <div
+            id="playerHealth"
+            style="background-color: yellow; height: 30px; width: 100%"
+          ></div>
+        </div>
+        <!-- timer -->
+        <div
+          id="timer"
+          style="
+            height: 100px;
+            width: 100px;
+            background: gray;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          10
+        </div>
+        <!-- enemy health -->
+        <div
+          style="
+            width: 100%;
+            background-color: orangered;
+            display: flex;
+            justify-content: start;
+          "
+        >
+          <div
+            id="enemyHealth"
+            style="background-color: yellow; height: 30px; width: 100%"
+          ></div>
+        </div>
+      </div>
+      <!-- Game canvas -->
+      <canvas
+        width="1024"
+        height="576"
+        style="width: 1024px; height: 576px; z-index: 1"
+      ></canvas>
+      <!-- End-game dashboard -->
+      <div
+        id="dashboard"
+        style="
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          top: 0;
+          left: 0;
+          display: none;
+          justify-content: center;
+          align-items: center;
+          background-color: rgb(0, 0, 0, 0.7);
+          color: white;
+          z-index: 3;
+        "
+      ></div>
+    </div>
+  </body>
+  <!-- <script src="./main.js"></script> -->
+  <script src="./classes/classes.js"></script>
+  <script src="./main.js"></script>
+</html>
